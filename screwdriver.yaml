@@ -9,7 +9,7 @@ jobs:
     A:
         requires: [main]
         steps:
-            - echo1: echo in parallel
+            - echo1: echo1 in parallel
     B:
         requires: [main]
         steps:
