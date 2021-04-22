@@ -1,5 +1,5 @@
 shared:
-    image: node:12
+    image: node:14
 
 jobs:
     main:
@@ -9,7 +9,7 @@ jobs:
     A:
         requires: [main]
         steps:
-            - echo: echo in parallel
+            - echo1: echo in parallel
     B:
         requires: [main]
         steps:
