@@ -9,11 +9,11 @@ jobs:
     A:
         requires: [main]
         steps:
-            - echo1: echo in parallel
+            - echo1: echo1 in parallel
     B:
         requires: [main]
         steps:
-            - echo: echo1 in parallel
+            - echo: echo in parallel
     C:
         requires: [A, B]
         steps:
