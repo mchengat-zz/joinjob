@@ -2,18 +2,14 @@ shared:
     image: node:14
 
 jobs:
-    main:
-        requires: [~pr, ~commit]
-        steps:
-            - echo: echo hi
     A:
-        requires: [main]
+        requires: [~commit]
         steps:
             - echo1: echo in parallel
     B:
-        requires: [main]
+        requires: [~commit]
         steps:
-            - echo: echo1 in parallel
+            - echo: echo in parallel
     C:
         requires: [A, B]
         steps:
