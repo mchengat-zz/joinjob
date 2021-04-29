@@ -5,11 +5,11 @@ jobs:
     A:
         requires: [~commit]
         steps:
-            - echo1: sleep 22;echo1 in parallel
+            - StepA: sleep 22;echo1 in parallel
     B:
         requires: [~commit]
         steps:
-            - echo: sleep 10;echo in parallel
+            - StepB: sleep 10;echo in parallel
     C:
         requires: [A, B]
         steps:
