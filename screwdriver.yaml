@@ -26,11 +26,11 @@ jobs:
         requires: [C]
         steps:
             - stepC: echo join after A and B
-    C:
+    G:
         requires: [D, C]
         steps:
             - stepC: echo1 join after A and B
-    D:
+    H:
         requires: [D, C]
         steps:
             - stepC: echo join after A and B
