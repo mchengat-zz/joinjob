@@ -5,12 +5,33 @@ jobs:
     A:
         requires: [~commit]
         steps:
-            - StepA: sleep 20;echo1 in parallel
+            - StepA: sleep 20;echo in parallel
     B:
         requires: [~commit]
         steps:
-            - StepB: sleep 10;echo1 in parallel
+            - StepB: sleep 10;echo in parallel
     C:
         requires: [A, B]
         steps:
             - stepC: echo join after A and B
+    D:
+        requires: [A, B]
+        steps:
+            - stepC: echo join after A and B
+    E:
+        requires: [D]
+        steps:
+            - stepC: echo join after A and B
+    F:
+        requires: [C]
+        steps:
+            - stepC: echo join after A and B
+    C:
+        requires: [D, C]
+        steps:
+            - stepC: echo1 join after A and B
+    D:
+        requires: [D, C]
+        steps:
+            - stepC: echo join after A and B
+            
