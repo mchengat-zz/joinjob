@@ -27,11 +27,11 @@ jobs:
         steps:
             - stepC: sleep20;echo1 join after A and B
     G:
-        requires: [D, C]
+        requires: [E, F]
         steps:
             - stepC: echo join after A and B
     H:
-        requires: [D, C]
+        requires: [E, F]
         steps:
             - stepC: echo join after A and B
             
