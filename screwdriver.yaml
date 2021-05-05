@@ -5,7 +5,7 @@ jobs:
     A:
         requires: [~commit]
         steps:
-            - StepA: sleep 20;echo in parallel
+            - StepA: sleep 20;echo1 in parallel
     B:
         requires: [~commit]
         steps:
