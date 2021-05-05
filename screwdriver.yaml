@@ -3,11 +3,11 @@ shared:
 
 jobs:
     A:
-        requires: [commit]
+        requires: [~commit]
         steps:
             - StepA: sleep 20;echo in parallel
     B:
-        requires: [commit]
+        requires: [~commit]
         steps:
             - StepB: sleep 10;echo1 in parallel
     C:
