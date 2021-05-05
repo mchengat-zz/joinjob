@@ -9,7 +9,7 @@ jobs:
     B:
         requires: [~commit]
         steps:
-            - StepB:sleep 10; echo1 in parallel
+            - StepB:sleep 10; echo in parallel
     C:
         requires: [A, B]
         steps:
