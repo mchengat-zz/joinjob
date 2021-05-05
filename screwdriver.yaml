@@ -25,7 +25,7 @@ jobs:
     F:
         requires: [C]
         steps:
-            - stepC: sleep20;echo1 join after A and B
+            - stepC: sleep10;echo join after A and B
     G:
         requires: [E, F]
         steps:
