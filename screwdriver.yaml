@@ -3,13 +3,13 @@ shared:
 
 jobs:
     A:
-        requires: [~commit, ~pr]
+        requires: [commit]
         steps:
-            - StepA: sleep 20;echo1 in parallel
+            - StepA: sleep 20;echo in parallel
     B:
-        requires: [~commit, ~pr]
+        requires: [commit]
         steps:
-            - StepB: sleep 10;echo in parallel
+            - StepB: sleep 10;echo1 in parallel
     C:
         requires: [A, B]
         steps:
