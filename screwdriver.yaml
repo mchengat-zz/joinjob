@@ -20,3 +20,8 @@ jobs:
         steps:
             - stepD: echo join after A and B
             
+    E:
+        requires: [B]
+        steps:
+            - stepE: echo join after A and B
+            
