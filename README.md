@@ -3,5 +3,5 @@
 [![Build Status][status-image]][status-url]
 
 
-[status-image]: http://sd.screwdriver.cd:4200/pipelines/1/badge
+[status-image]: https://img.shields.io/badge/node-success-green
 [status-url]: http://sd.screwdriver.cd:4200/pipelines/1
