@@ -15,3 +15,8 @@ jobs:
         steps:
             - stepC: echo join after A and B
             
+    D:
+        requires: [A, B]
+        steps:
+            - stepD: echo join after A and B
+            
