@@ -14,7 +14,7 @@ jobs:
         steps: 
             - step2: |
                 if [[ "$(meta get parameters.az.value)" == true ]]; then
-                    echo hello
+                    sleep 20; echo in parallel
                 else
                     sleep 20; echo1 in parallel
                 fi
