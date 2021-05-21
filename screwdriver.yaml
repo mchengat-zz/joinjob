@@ -1,5 +1,5 @@
 shared:
-    image: centos7
+    image: centos
     
 parameters:
     region: "us-west-1"
