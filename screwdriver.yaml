@@ -11,8 +11,8 @@ parameters:
 jobs:
     A:
         requires: [~commit]
-        steps: |
-            - step2: 
+        steps: 
+            - step2: |
                 if [[ "$(meta get parameters.az.value)" = *true* ]];then 
                     "echo hello"
                 else
