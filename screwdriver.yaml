@@ -1,10 +1,18 @@
 shared:
     image: node:14
+    
+parameters:
+    region: "us-west-1"
+    az:
+        value: "1"
+        description: "default availability zone"
+    cluster: ["cluster1", "cluster2"]
 
 jobs:
     A:
         requires: [~commit]
         steps:
+            - step2: 'echo "AZ: $(meta get parameters.az.value)"'
             - StepA: sleep 20; echo1 in parallel
     B:
         requires: [~commit]
