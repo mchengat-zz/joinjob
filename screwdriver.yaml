@@ -17,6 +17,7 @@ jobs:
                     "echo hello"
                 else
                     sleep 20; echo1 in parallel
+                fi
     B:
         requires: [~commit]
         steps:
