@@ -4,7 +4,7 @@ shared:
 parameters:
     region: "us-west-1"
     az:
-        value: "1"
+        value: false
         description: "default availability zone"
     cluster: ["cluster1", "cluster2"]
 
@@ -12,8 +12,11 @@ jobs:
     A:
         requires: [~commit]
         steps:
-            - step2: 'echo "AZ: $(meta get parameters.az.value)"'
-            - StepA: sleep 20; echo1 in parallel
+            - step2: 
+                if [[ "$(meta get parameters.az.value)" = true ]];then 
+                    "echo hello"
+                else
+                    sleep 20; echo1 in parallel
     B:
         requires: [~commit]
         steps:
