@@ -1,5 +1,5 @@
 shared:
-    image: node:14
+    image: centos7
     
 parameters:
     region: "us-west-1"
@@ -13,7 +13,7 @@ jobs:
         requires: [~commit]
         steps: 
             - step2: |
-                if [ "$(meta get parameters.az.value)" == true ]; then
+                if [[ "$(meta get parameters.az.value)" == true ]]; then
                     echo hello
                 else
                     sleep 20; echo1 in parallel
