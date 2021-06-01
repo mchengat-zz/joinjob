@@ -18,7 +18,7 @@ jobs:
                 else
                     sleep 20; echo1 in parallel
                 fi
-    B:
+    Bddkewbfewfewfoewirwgorwgrwgbueribgkuerkfrkfkkfhuerhfguireuigberukkjdfnvjkdfnkvnfeukvukervukfejkvnjkdfnvjkdfnjkvfejkvuerbvkuerbvkdfnvkdfnvkjdfnvkrnb:
         requires: [~commit]
         steps:
             - StepB: sleep 10; echo in parallel
