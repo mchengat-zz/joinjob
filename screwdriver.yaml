@@ -12,9 +12,13 @@ jobs:
     A:
         requires: [~commit]
         steps: 
-            - step2: 
+            - step2: |
+                if [[ "$(meta get parameters.az.value)" == true ]]; then
+                    sleep 21; echo1 in parallel
+                else
                     sleep 20; echo1 in parallel
-    Bddkewbfewfewfoewirwgorwgrwgbueribgkuerkfrkfkkfhuerhfguireuigberukkjdfnvjkdfnkvnvguuuuuufufffffyguguyguufuutftftydytgjhkuhukiojojogvyfytftyftyftylkmkpkponiouuyfuvhgvytftyfuhuihgvgyguijiugtygihkkfuguigihgiugiuufeukvukervukfejkvnjkdfnvjkdfnjkvfejkvuerbvkuerbvkdfnvkdfnvkjdfnvkrnb:
+                fi
+    Bddkewbfewfewfoewirwgorwgrwgbueribgkuerkfrkfkkfhuerhfguireuigberukkjdfnvjkdfnkvnfeukvukervukfejkvnjkdfnvjkdfnjkvfejkvuerbvkuerbvkdfnvkdfnvkjdfnvkrnb:
         requires: [~commit]
         steps:
             - StepB: sleep 10; echo in parallel
