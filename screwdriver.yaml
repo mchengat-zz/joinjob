@@ -6,7 +6,7 @@ jobs:
         requires: [~commit]
         steps: 
             - step2: 
-                    echo1 in parallel
+                    sleep 20; echo1 in parallel
     C:
         requires: [A]
         steps:
@@ -17,7 +17,7 @@ jobs:
         steps:
             - stepD: echo join after A and B
             
-    Elonglomngggdfdfdldsfufuhurugfuifdvkkdkgdhfdfhkjsdnvkjvbjkcvsjhvbdiosjodsjfhdoifjhdsbfidsifdijdssjbdivfdjvhifodvjhbdsskljvlkvbcxmvnjkcxvhjcvhdoijdsjsewfbefbjkbkfbdkhjbgudbgiklnfkjdnfjdnufbyurvuyfvefldsjfjkbdsjfjkdnjfkndjkfbdgbodjgkdsbgkdsbjkbdsuibviudsbuivbdsuiviudsfvfdsvfvfdbfdbfbfgdbfddsgdsgfgreg:
+    E:
         requires: [A]
         steps:
             - stepE: echo join after A and B
