@@ -1,5 +1,12 @@
 shared:
     image: centos
+    
+parameters:
+    region: "us-west-1"
+    az:
+        value: "false"
+        description: "default availability zone"
+    cluster: ["cluster1", "cluster2"]
 
 jobs:
     A:
@@ -7,18 +14,22 @@ jobs:
         steps: 
             - step2: 
                     sleep 20; echo1 in parallel
+    Bddkewbfewfewfoewirwgorwgrwgbueribgkuerkfrkfkkfhuerhfguireuigberukkjdfnvjkdfnkvnvguuuuuufufffffyguguyguufuutftftydytgjhkuhukiojojogvyfytftyftyftylkmkpkponiouuyfuvhgvytftyfuhuihgvgyguijiugtygihkkfuguigihgiugiuufeukvukervukfejkvnjkdfnvjkdfnjkvfejkvuerbvkuerbvkdfnvkdfnvkjdfnvkrnb:
+        requires: [~commit]
+        steps:
+            - StepB: sleep 10; echo in parallel
     C:
-        requires: [A]
+        requires: [A, B]
         steps:
             - stepC: echo join after A and B
             
     D:
-        requires: [A, C]
+        requires: [A, B]
         steps:
             - stepD: echo join after A and B
             
     E:
-        requires: [A]
+        requires: [B]
         steps:
             - stepE: echo join after A and B
             
